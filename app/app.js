@@ -15,11 +15,11 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import FontFaceObserver from 'fontfaceobserver';
 import createHistory from 'history/createBrowserHistory';
+import { IntlProvider } from 'react-intl';
+import App from 'components/app';
+import enMessages from './messages/messages_EN.json';
 import 'semantic-ui-css/semantic.min.css';
 import 'sanitize.css/sanitize.css';
-
-// Import root app
-import App from 'components/app';
 
 // Load the favicon
 /* eslint-disable import/no-webpack-loader-syntax */
@@ -53,7 +53,9 @@ const render = () => {
     <Provider store={store}>
       {/* <LanguageProvider messages={messages}> */}
       <ConnectedRouter history={history}>
-        <App />
+        <IntlProvider locale="en" messages={enMessages}>
+          <App />
+        </IntlProvider>
       </ConnectedRouter>
       {/* </LanguageProvider> */}
     </Provider>,
@@ -62,13 +64,12 @@ const render = () => {
 };
 
 if (module.hot) {
-  // Hot reloadable React components and translation json files
-  // modules.hot.accept does not accept dynamic dependencies,
-  // have to be constants at compile-time
-  module.hot.accept(['containers/App'], () => {
-    ReactDOM.unmountComponentAtNode(MOUNT_NODE);
-    render();
-  });
+  // Find there is issues with this
+
+  // module.hot.accept(['components'], () => {
+  //   ReactDOM.unmountComponentAtNode(MOUNT_NODE);
+  //   render();
+  // });
 }
 
 render();

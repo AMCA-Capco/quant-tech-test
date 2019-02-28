@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Icon } from 'semantic-ui-react';
+import { FormattedMessage } from 'react-intl';
 import './style.scss';
 
 class Header extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -11,7 +12,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
           <Link to="/">
             <Button>
               <Icon name="angle down" />
-              Homepage
+              <FormattedMessage id="homepage.label" />
             </Button>
           </Link>
         </div>

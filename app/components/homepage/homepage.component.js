@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
 import { Sample1, Sample2 } from 'components/common';
 import './style.scss';
 
@@ -18,17 +19,19 @@ class HomePage extends React.Component {
         <Grid divided="vertically" celled>
           <Grid.Row columns={1}>
             <Grid.Column>
-              <h1>Homepage: {value}</h1>
+              <h1>
+                <FormattedMessage id="homepage.label" />: {value}
+              </h1>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row columns={1}>
             <Grid.Column>
-              <Sample1 />
+              <Sample1 message="sample.component" />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row columns={1}>
             <Grid.Column>
-              <Sample2 message="Sample functional component" />
+              <Sample2 message="sample.functional.component" />
             </Grid.Column>
           </Grid.Row>
         </Grid>

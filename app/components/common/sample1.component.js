@@ -1,23 +1,22 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import PropTypes from 'prop-types';
 import './style.scss';
 
-class SampleComponent extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      message: 'Sample Component'
-    };
-  }
-
+class Sample1 extends React.PureComponent {
   render() {
-    const { message } = this.state;
+    const { message } = this.props;
 
     return (
       <div>
-        { message }
+        <FormattedMessage id={message} />
       </div>
     );
   }
 }
 
-export default SampleComponent;
+Sample1.propTypes = {
+  message: PropTypes.string
+};
+
+export default Sample1;
