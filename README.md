@@ -9,8 +9,10 @@
 * Scss
 * Js lint and es6 lint
 * i18n (internationalisation) support
+* Precommit hooks
 
 ## To Do
 
 * Variables from Semantic UI theme
 * Theme for Semantic UI theme
+* Lint for css
