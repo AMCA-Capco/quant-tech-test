@@ -8,11 +8,13 @@ const initialState = fromJS({
 
 function homepage(state = initialState, action) {
   switch (action.type) {
-    case SAMPLE_DATA:
+    case SAMPLE_DATA: {
       const { value } = action;
       return state.merge({ value });
-    default:
+    }
+    default: {
       return state;
+    }
   }
 }
 

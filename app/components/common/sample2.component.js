@@ -1,12 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './style.scss';
 
-const SampleFunctionalComponent = () => {
-    return (
-        <div>
-            Sample functional component
-        </div>
-    );
+const Sample2 = ({ message }) => <div>{message}</div>;
+
+Sample2.propTypes = {
+  message: PropTypes.string
 };
 
-export default SampleFunctionalComponent;
+export default Sample2;
