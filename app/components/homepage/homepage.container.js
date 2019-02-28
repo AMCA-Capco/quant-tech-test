@@ -13,6 +13,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     sampleDispatch: (value) => {
+      //Calls redux action
       dispatch({
         type: SAMPLE_DATA,
         value
