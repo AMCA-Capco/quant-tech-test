@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from 'semantic-ui-react';
 import './style.scss';
 
 /**
@@ -7,7 +8,7 @@ import './style.scss';
  */
 const Sample2 = ({ message }) => (
   <div>
-    <button>{message}</button>
+    <Button secondary>{message}</Button>
   </div>
 );
 

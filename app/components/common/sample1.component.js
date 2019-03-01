@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from 'semantic-ui-react';
 import './style.scss';
 
 /**
@@ -11,7 +12,7 @@ class Sample1 extends React.PureComponent {
 
     return (
       <div>
-        <button>{message}</button>
+        <Button primary>{message}</Button>
       </div>
     );
   }
