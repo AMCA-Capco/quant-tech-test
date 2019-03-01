@@ -18,6 +18,8 @@
 
 ## Setup
 
+### Installation
+
 * Install with yarn (not npm). Npm will break the documentation plugin and styleguide when it sets up react-docgen
 
 ### Doc and styleguide
@@ -32,4 +34,4 @@ Access on http://localhost:6060
 
 ```
 npm run cypress:open
-``
+```
