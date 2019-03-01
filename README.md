@@ -14,8 +14,6 @@
 
 ## To Do
 
-* Variables from Semantic UI theme
-* Theme for Semantic UI theme
 * Lint for css
 
 ## Setup
@@ -26,7 +24,7 @@
 
 ```
 npm run styleguide
-``
+```
 
 Access on http://localhost:6060
 
