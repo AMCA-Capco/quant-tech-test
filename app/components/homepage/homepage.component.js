@@ -1,11 +1,24 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, injectIntl } from 'react-intl';
 import { Sample1, Sample2 } from 'components/common';
 import './style.scss';
 
 class HomePage extends React.Component {
+  constructor(props) {
+    super(props);
+
+    const { intl: { formatMessage } } = props;
+    
+    //Don't put this logic in the render function, it will re-render <FormattedMessage /> every time
+    this.state = {
+      sampleContentMessage: formatMessage({ id: 'sample.component' }),
+      sampleContentFunctionalMessage: formatMessage({ id: 'sample.functional.component' })
+    }
+  }
+
+
   componentDidMount() {
     const { sampleDispatch } = this.props;
     sampleDispatch('Sample redux data');
@@ -13,6 +26,7 @@ class HomePage extends React.Component {
 
   render() {
     const { value } = this.props;
+    const { sampleContentMessage, sampleContentFunctionalMessage } = this.state;
 
     return (
       <div>
@@ -26,12 +40,12 @@ class HomePage extends React.Component {
           </Grid.Row>
           <Grid.Row columns={1}>
             <Grid.Column>
-              <Sample1 message="sample.component" />
+              <Sample1 message={sampleContentMessage} />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row columns={1}>
             <Grid.Column>
-              <Sample2 message="sample.functional.component" />
+              <Sample2 message={sampleContentFunctionalMessage} />
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -45,4 +59,4 @@ HomePage.propTypes = {
   value: PropTypes.string
 };
 
-export default HomePage;
+export default injectIntl(HomePage);

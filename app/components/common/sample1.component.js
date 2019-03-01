@@ -1,15 +1,17 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import './style.scss';
 
+/**
+ * Component is described here
+ */
 class Sample1 extends React.PureComponent {
   render() {
     const { message } = this.props;
 
     return (
       <div>
-        <FormattedMessage id={message} />
+        <button>{message}</button>
       </div>
     );
   }

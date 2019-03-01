@@ -25,6 +25,7 @@
     "test:clean": "rimraf ./coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
     "cypress:open": "cypress open",
+    "styleguide": "npx styleguidist server",
     "precommit": "npm run lint"
   },
   "dependencies": {
@@ -102,7 +103,9 @@
     "plop": "2.1.0",
     "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-loader": "^3.0.0",
+    "react-docgen": "^4.0.1",
     "react-intl": "^2.8.0",
+    "react-styleguidist": "^9.0.1",
     "react-test-renderer": "^16.5.2",
     "redux-saga": "^0.16.2",
     "rimraf": "2.6.2",

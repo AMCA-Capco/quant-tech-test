@@ -1,9 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
 import './style.scss';
 
-const Sample2 = ({ message }) => <div><FormattedMessage id={message} /></div>;
+/**
+ * Component is described here
+ */
+const Sample2 = ({ message }) => (
+  <div>
+    <button>{message}</button>
+  </div>
+);
 
 Sample2.propTypes = {
   message: PropTypes.string
