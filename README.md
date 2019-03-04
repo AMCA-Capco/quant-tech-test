@@ -14,7 +14,6 @@
 
 ## To Do
 
-* Sample cypress test
 * Sample saga
 
 ## Setup

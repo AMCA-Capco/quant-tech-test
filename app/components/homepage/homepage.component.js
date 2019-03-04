@@ -40,7 +40,7 @@ class HomePage extends React.Component {
           </Grid.Row>
           <Grid.Row columns={1}>
             <Grid.Column>
-              <Sample1 message={sampleContentMessage} />
+              <Sample1 message={sampleContentMessage} id="sample1Button" />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row columns={1}>
