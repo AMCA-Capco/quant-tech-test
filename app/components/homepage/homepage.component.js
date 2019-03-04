@@ -10,12 +10,12 @@ class HomePage extends React.Component {
     super(props);
 
     const { intl: { formatMessage } } = props;
-    
-    //Don't put this logic in the render function, it will re-render <FormattedMessage /> every time
+
+    // Don't put this logic in the render function, it will re-render <FormattedMessage /> every time
     this.state = {
       sampleContentMessage: formatMessage({ id: 'sample.component' }),
       sampleContentFunctionalMessage: formatMessage({ id: 'sample.functional.component' })
-    }
+    };
   }
 
 
@@ -56,7 +56,8 @@ class HomePage extends React.Component {
 
 HomePage.propTypes = {
   sampleDispatch: PropTypes.func,
-  value: PropTypes.string
+  value: PropTypes.string,
+  intl: PropTypes.object
 };
 
 export default injectIntl(HomePage);

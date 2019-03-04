@@ -14,7 +14,6 @@
 
 ## To Do
 
-* Lint for css
 * Sample cypress test
 * Sample saga
 

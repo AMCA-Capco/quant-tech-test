@@ -9,7 +9,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
   render() {
     return (
       <div className="header">
-        <img src={Banner} width="200px" />
+        <img src={Banner} width="200px" alt="Logo" />
         <div className="nav-bar">
           <Link to="/">
             <Button>
