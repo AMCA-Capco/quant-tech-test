@@ -1,13 +1,13 @@
 {
-  "name": "react-redux-boilerplate",
+  "name": "quantifeed-tech-test",
   "version": "1.0.0",
-  "description": "Capco react / redux boilerplate",
+  "description": "Quantifeed Tech Test",
   "repository": {
     "type": "git",
     "url": "git://github.com/flexdinesh/react-redux-boilerplate.git"
   },
   "license": "MIT",
-  "author": "Peter Hammans",
+  "author": "Alex Mccarroll",
   "scripts": {
     "prebuild": "npm run build:clean",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",

@@ -2,9 +2,9 @@ import { createSelector } from 'reselect';
 
 const getState = (state) => state;
 
-const getValue = createSelector(
+const getInvestments = createSelector(
   getState,
-  (state) => state.get('homepage').get('value')
+  (state) => state.get('homepage').get('investments')
 );
 
-export { getValue };
+export { getInvestments };

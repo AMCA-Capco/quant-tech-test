@@ -1,23 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Icon } from 'semantic-ui-react';
+import { Menu, Container, Image } from 'semantic-ui-react';
 import { FormattedMessage } from 'react-intl';
-import Banner from './images/banner.png';
+import Logo from './images/logo.png';
 import './style.scss';
 
 class Header extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div className="header">
-        <img src={Banner} width="200px" alt="Logo" />
-        <div className="nav-bar">
-          <Link to="/">
-            <Button>
-              <Icon name="angle down" />
-              <FormattedMessage id="homepage.label" />
-            </Button>
-          </Link>
-        </div>
+        <Menu borderless secondary pointing size="small">
+          <Container>
+            {/* <Menu.Item>
+              <Link to="/">
+                <Image src={Logo} size="small" />
+              </Link>
+            </Menu.Item> */}
+            <Menu.Item>
+              <Link to="/">
+                <FormattedMessage id="header.home" />
+              </Link>
+            </Menu.Item>
+            <Menu.Menu position="right">
+              <Menu.Item>
+                <Link to="/">
+                  <FormattedMessage id="header.profile" />
+                </Link>
+              </Menu.Item>
+              <Menu.Item>
+                <Link to="/">
+                  <FormattedMessage id="header.logout" />
+                </Link>
+              </Menu.Item>
+            </Menu.Menu>
+          </Container>
+        </Menu>
       </div>
     );
   }

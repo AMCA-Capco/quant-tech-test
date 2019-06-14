@@ -1,22 +1,22 @@
 import { connect } from 'react-redux';
-import { SAMPLE_DATA } from './actions';
-import { getValue } from './selectors';
+import { UPDATE_INVESTMENTS } from './actions';
+import { getInvestments } from './selectors';
 import Homepage from './homepage.component';
 
 function mapStateToProps(state) {
   // Get properties from redux state here
-  const value = getValue(state);
+  const investments = getInvestments(state);
 
-  return { value };
+  return { investments };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    sampleDispatch: (value) => {
+    updateInvestments: (investments) => {
       // Calls redux action
       dispatch({
-        type: SAMPLE_DATA,
-        value
+        type: UPDATE_INVESTMENTS,
+        payload: investments
       });
     }
   };

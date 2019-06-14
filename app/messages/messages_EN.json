@@ -1,5 +1,10 @@
 {
-  "homepage.label": "Homepage",
+  "header.home": "Home",
+  "header.logout": "Logout",
+  "header.profile": "Profile",
+
+  "homepage.header": "My Retirement",
+
   "sample.component": "Sample component",
   "sample.functional.component": "Sample functional component"
 }

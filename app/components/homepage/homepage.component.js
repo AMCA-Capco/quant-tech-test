@@ -1,63 +1,68 @@
 import React from 'react';
-import { Grid } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { FormattedMessage, injectIntl } from 'react-intl';
-import { Sample1, Sample2 } from 'components/common';
+import { FormattedMessage } from 'react-intl';
 import './style.scss';
+import Console from '../console';
 
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
 
-    const { intl: { formatMessage } } = props;
-
     // Don't put this logic in the render function, it will re-render <FormattedMessage /> every time
     this.state = {
-      sampleContentMessage: formatMessage({ id: 'sample.component' }),
-      sampleContentFunctionalMessage: formatMessage({ id: 'sample.functional.component' })
+      investments: []
     };
   }
 
-
   componentDidMount() {
-    const { sampleDispatch } = this.props;
-    sampleDispatch('Sample redux data');
+    const { investments } = this.props;
+
+    if (investments) {
+      const investmentList = investments.toJS();
+
+      this.setState({
+        investments: investmentList
+      });
+    }
   }
 
   render() {
-    const { value } = this.props;
-    const { sampleContentMessage, sampleContentFunctionalMessage } = this.state;
+    const { investments } = this.state;
+    const { updateInvestment } = this.props;
 
     return (
-      <div>
-        <Grid divided="vertically" celled>
-          <Grid.Row columns={1}>
-            <Grid.Column>
-              <h1>
-                <FormattedMessage id="homepage.label" />: {value}
-              </h1>
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row columns={1}>
-            <Grid.Column>
-              <Sample1 message={sampleContentMessage} id="sample1Button" />
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row columns={1}>
-            <Grid.Column>
-              <Sample2 message={sampleContentFunctionalMessage} />
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
+      <div className="homepage">
+        <Container>
+          <div className="main-body">
+            <h1 className="main-title">
+              <FormattedMessage id="homepage.header" />
+            </h1>
+
+            <div className="console">
+              <div className="console-wrapper">
+                <div className="header">
+                Manage
+                </div>
+                <Console investments={investments} updateInvestment={updateInvestment} />
+                <Console investments={investments} updateInvestment={updateInvestment} />
+                <Console investments={investments} updateInvestment={updateInvestment} />
+                <Console investments={investments} updateInvestment={updateInvestment} />
+                <Console investments={investments} updateInvestment={updateInvestment} />
+                <Console investments={investments} updateInvestment={updateInvestment} />
+                <Console investments={investments} updateInvestment={updateInvestment} />
+              </div>
+            </div>
+          </div>
+        </Container>
       </div>
     );
   }
 }
 
 HomePage.propTypes = {
-  sampleDispatch: PropTypes.func,
-  value: PropTypes.string,
-  intl: PropTypes.object
+  investments: PropTypes.object,
+  updateInvestment: PropTypes.func
 };
 
-export default injectIntl(HomePage);
+export default HomePage;
