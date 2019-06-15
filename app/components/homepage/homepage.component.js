@@ -27,6 +27,7 @@ class HomePage extends React.Component {
     }
   }
 
+
   render() {
     const { investments } = this.state;
     const { updateInvestment } = this.props;
@@ -38,19 +39,20 @@ class HomePage extends React.Component {
             <h1 className="main-title">
               <FormattedMessage id="homepage.header" />
             </h1>
-
             <div className="console">
-              <div className="console-wrapper">
-                <div className="header">
+              <div className="console-header">
                 Manage
-                </div>
-                <Console investments={investments} updateInvestment={updateInvestment} />
-                <Console investments={investments} updateInvestment={updateInvestment} />
-                <Console investments={investments} updateInvestment={updateInvestment} />
-                <Console investments={investments} updateInvestment={updateInvestment} />
-                <Console investments={investments} updateInvestment={updateInvestment} />
-                <Console investments={investments} updateInvestment={updateInvestment} />
-                <Console investments={investments} updateInvestment={updateInvestment} />
+              </div>
+              <div className="list-items">
+                <ul className="columns" data-columns="2">
+                  <li><Console title="Creation Date" dataType="" investments={investments} updateInvestment={updateInvestment} /></li>
+                  <li><Console title="Account number" dataType="" investments={investments} updateInvestment={updateInvestment} /></li>
+                  <li><Console title="Charge Date" dataType="" investments={investments} updateInvestment={updateInvestment} /></li>
+                  <li><Console title="Status" dataType="" investments={investments} updateInvestment={updateInvestment} /></li>
+                  <li><Console title="Investment amount" dataType="" investments={investments} updateInvestment={updateInvestment} /></li>
+                  <li><Console title="Accumulated investment amount" dataType="" investments={investments} updateInvestment={updateInvestment} /></li>
+                  <li><Console title="Current market value" dataType="" investments={investments} updateInvestment={updateInvestment} /></li>
+                </ul>
               </div>
             </div>
           </div>

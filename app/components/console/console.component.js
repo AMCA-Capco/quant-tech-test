@@ -18,30 +18,27 @@ class Console extends React.Component { // eslint-disable-line react/prefer-stat
     render() {
       const { investments } = this.props;
       return (
-        <div className="console">
-          
-            <div className="item-wrapper">
-              {
-                investments.map((investment, i) => (
-                  <div className="investment-wrapper" key={`investment-${i + 0}`}>
-                    Account Number {investment.accountNumber}
-                  </div>
-                ))
-              }
-            </div>
-            <div>
-              <button type="button" onClick={this.togglePopup.bind(this)}>show popup</button>
-              {
-                this.state.showPopup 
+        <div className="items">
+          {
+            investments.map((investment, i) => (
+              <div className="investment-wrapper" key={`investment-${i + 0}`}>
+                {this.props.title}: {investments.dataType}
+              </div>
+            ))
+          }
+          <div className="popup-button">
+            <button type="button" onClick={this.togglePopup.bind(this)}>popup</button>
+            {
+              this.state.showPopup
                 ? (
-                    <Popup 
-                        closePopup={this.togglePopup.bind(this)} 
-                    />
-                ) 
+                      <Popup
+                    closePopup={this.togglePopup.bind(this)}
+                  />
+                )
                 : null
-              }
-            </div>
+            }
           </div>
+        </div>
       );
     }
 }
