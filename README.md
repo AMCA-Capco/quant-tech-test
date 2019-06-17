@@ -1,3 +1,5 @@
+# My Retirement Tech Test
+
 ## Included
 
 * Redux
@@ -12,15 +14,17 @@
 * Precommit hooks
 * React docgen and React styleguidist
 
-## To Do
-
-* Sample saga
-
 ## Setup
 
 ### Installation
 
 * Install with yarn (not npm). Npm will break the documentation plugin and styleguide when it sets up react-docgen
+
+```
+yarn install
+yarn start
+```
+Access on http://localhost:3000
 
 ### Doc and styleguide
 
@@ -29,9 +33,3 @@ npm run styleguide
 ```
 
 Access on http://localhost:6060
-
-### Run cypress (ui tests)
-
-```
-npm run cypress:open
-```

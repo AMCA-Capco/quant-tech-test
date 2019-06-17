@@ -9,7 +9,6 @@ class HomePage extends React.Component {
   constructor(props) {
     super(props);
 
-    // Don't put this logic in the render function, it will re-render <FormattedMessage /> every time
     this.state = {
       investments: []
     };
@@ -27,7 +26,6 @@ class HomePage extends React.Component {
     }
   }
 
-
   render() {
     const { investments } = this.state;
     const { updateInvestment } = this.props;
@@ -41,7 +39,7 @@ class HomePage extends React.Component {
             </h1>
             <div className="console">
               <div className="console-header">
-                Manage
+                <FormattedMessage id="homepage.manage" />
               </div>
               <div className="list-items">
                 <ul className="columns" data-columns="2">

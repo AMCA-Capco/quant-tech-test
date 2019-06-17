@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
 import './style.scss';
 
 class Popup extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
     this.state = {
-      value: props.investment[props.key],
-      investment: props.investment
+      // value: props.investment[props.key],
+      // investment: props.investment
     };
   }
 
@@ -22,10 +23,6 @@ class Popup extends React.Component { // eslint-disable-line react/prefer-statel
     this.handleClose();
   }
 
-  handleClose() {
-    this.setState({ show: false });
-  }
-
   handleChange(event) {
     this.setState({ value: event.target.value });
   }
@@ -36,13 +33,18 @@ class Popup extends React.Component { // eslint-disable-line react/prefer-statel
     return (
       <div className="popup">
         <div className="popup_inner">
-          <h1>{this.props.title}</h1>
-          <form>
-                  <input type="text" value={value} onChange={this.handleChange}></input>
-            <input type="submit" value="submit" />
-            <button onClick={this.handleClose}>Close</button>
-            <button onClick={this.handleSubmit}>Determine</button>
-          </form>
+          <h1 className="popup-header">Change account number:</h1>
+          <hr />
+          <h3 className="popup-header2">Please select your debit account number:</h3>
+          <input type="text" value={value} onChange={this.handleChange}></input>
+          <div className="popup-button-div">
+            <button className="popup-button" type="submit" onClick={this.props.closePopup}>
+              <FormattedMessage id="popup.cancel" />
+            </button>
+            <button className="popup-button" type="submit" onClick={this.handleSubmit}>
+              <FormattedMessage id="popup.determine" />
+            </button>
+          </div>
         </div>
       </div>
     );

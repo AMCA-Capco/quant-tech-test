@@ -4,6 +4,10 @@
   "header.profile": "Profile",
 
   "homepage.header": "My Retirement",
+  "homepage.manage": "Manage",
+
+  "popup.cancel": "Cancel",
+  "popup.determine": "Determine",
 
   "sample.component": "Sample component",
   "sample.functional.component": "Sample functional component"

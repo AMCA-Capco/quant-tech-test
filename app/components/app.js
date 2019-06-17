@@ -16,10 +16,10 @@ import './style.scss';
 const App = () => (
   <div className="app-wrapper">
     <Helmet
-      titleTemplate="%s - Capco react / redux boilerplate"
-      defaultTitle="Capco react / redux boilerplate"
+      titleTemplate="Quantifeed Tech Test"
+      defaultTitle="Quantifeed Tech Test"
     >
-      <meta name="description" content="Capco react / redux boilerplate" />
+      <meta name="description" content="Quantifeed Tech Test" />
     </Helmet>
     <Header />
     <Switch>

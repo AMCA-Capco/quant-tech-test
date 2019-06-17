@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import Popup from '../popup/popup.component';
 import './style.scss';
 
-class Console extends React.Component { // eslint-disable-line react/prefer-stateless-function
-    state = {
-      showPopup: false
-    };
+class Console extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+          showPopup: false
+        };
+      }
 
     togglePopup() {
       this.setState({
@@ -26,16 +29,14 @@ class Console extends React.Component { // eslint-disable-line react/prefer-stat
               </div>
             ))
           }
-          <div className="popup-button">
-            <button type="button" onClick={this.togglePopup.bind(this)}>popup</button>
-            {
-              this.state.showPopup
-                ? (
-                      <Popup
-                    closePopup={this.togglePopup.bind(this)}
-                  />
-                )
-                : null
+          <div className="console-button-div">
+            <button className="console-button" type="button" onClick={this.togglePopup.bind(this)}>popup</button>
+            { this.state.showPopup ? 
+            <Popup
+                text="Cancel"
+                closePopup={this.togglePopup.bind(this)}
+            />
+              : null
             }
           </div>
         </div>
