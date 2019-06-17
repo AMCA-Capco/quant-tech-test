@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import './style.scss';
 
-class Popup extends React.Component { // eslint-disable-line react/prefer-stateless-function
+class Popup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,8 +19,6 @@ class Popup extends React.Component { // eslint-disable-line react/prefer-statel
     investment[key] = value;
 
     updateInvestment([investment]);
-
-    this.handleClose();
   }
 
   handleChange(event) {

@@ -30,7 +30,7 @@ class Console extends React.Component {
             ))
           }
           <div className="console-button-div">
-            <button className="console-button" type="button" onClick={this.togglePopup.bind(this)}>popup</button>
+            <button id="edit-button" onClick={this.togglePopup.bind(this)}></button>
             { this.state.showPopup ? 
             <Popup
                 text="Cancel"

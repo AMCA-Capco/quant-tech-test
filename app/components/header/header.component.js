@@ -5,17 +5,12 @@ import { FormattedMessage } from 'react-intl';
 import Logo from './images/logo.png';
 import './style.scss';
 
-class Header extends React.Component { // eslint-disable-line react/prefer-stateless-function
+class Header extends React.Component { 
   render() {
     return (
       <div className="header">
         <Menu borderless secondary pointing size="small">
           <Container>
-            {/* <Menu.Item>
-              <Link to="/">
-                <Image src={Logo} size="small" />
-              </Link>
-            </Menu.Item> */}
             <Menu.Item>
               <Link to="/">
                 <FormattedMessage id="header.home" />
