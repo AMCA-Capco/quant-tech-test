@@ -41,16 +41,8 @@ class HomePage extends React.Component {
               <div className="console-header">
                 <FormattedMessage id="homepage.manage" />
               </div>
-              <div className="list-items">
-                <ul className="columns" data-columns="2">
-                  <li><Console title="Creation Date" dataType="" investments={investments} updateInvestment={updateInvestment} /></li>
-                  <li><Console title="Account number" dataType="" investments={investments} updateInvestment={updateInvestment} /></li>
-                  <li><Console title="Charge Date" dataType="" investments={investments} updateInvestment={updateInvestment} /></li>
-                  <li><Console title="Status" dataType="" investments={investments} updateInvestment={updateInvestment} /></li>
-                  <li><Console title="Investment amount" dataType="" investments={investments} updateInvestment={updateInvestment} /></li>
-                  <li><Console title="Accumulated investment amount" dataType="" investments={investments} updateInvestment={updateInvestment} /></li>
-                  <li><Console title="Current market value" dataType="" investments={investments} updateInvestment={updateInvestment} /></li>
-                </ul>
+              <div className="console-container">
+                <Console investments={investments} updateInvestment={updateInvestment} />
               </div>
             </div>
           </div>

@@ -7,8 +7,8 @@ class Popup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // value: props.investment[props.key],
-      // investment: props.investment
+      value: props.investment[props.key],
+      investment: props.investment
     };
   }
 

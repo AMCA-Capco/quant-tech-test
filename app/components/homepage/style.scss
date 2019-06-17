@@ -18,19 +18,4 @@
         flex-direction: column !important;
 
     }
-    .list-items {
-        display: flex;
-        flex-direction: row ;
-        margin: 2% 5%;
-        align-items: center;
-        justify-content: center;
-    }
 }
-
-ul {
-    width: 100%;
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    list-style-type: none;
-  }
