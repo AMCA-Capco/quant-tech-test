@@ -37,3 +37,13 @@ Access on http://localhost:6060
 ## Final thoughts
 
 I thought it best to focus on the overall look and feel of the app however, if I had more time I would have used redux to display the data.  I also wanted to focus on making sure the app was made up of reusable components from the beginning so used my time to do that, focusing on practices such as SRP.
+
+## Example
+
+### Homepage
+
+![alt text](homepage.png)
+
+### Popup
+
+![alt text](popup.png)
