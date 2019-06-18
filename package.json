@@ -9,8 +9,7 @@
   "license": "MIT",
   "author": "Alex Mccarroll",
   "scripts": {
-    "start": "node index.js",
-    "heroku-postbuild": "yarn && yarn run build"
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
