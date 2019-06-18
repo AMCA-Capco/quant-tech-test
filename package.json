@@ -10,7 +10,7 @@
   "author": "Alex Mccarroll",
   "scripts": {
     "start": "node index.js",
-    "heroku-postbuild": "cd client && yarn && yarn run build"
+    "heroku-postbuild": "yarn && yarn run build"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
