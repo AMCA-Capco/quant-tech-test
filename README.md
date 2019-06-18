@@ -38,6 +38,8 @@ Access on http://localhost:6060
 
 I thought it best to focus on the overall look and feel of the app however, if I had more time I would have used redux to display the data.  I also wanted to focus on making sure the app was made up of reusable components from the beginning so used my time to do that, focusing on practices such as SRP.
 
+If I had more time I would work on refactoring the code and feeding the mock data through with Redux on the branch called `implementing-redux`.
+
 ## Example
 
 ### Homepage
