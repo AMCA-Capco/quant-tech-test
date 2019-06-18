@@ -27,7 +27,8 @@
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
     "cypress:open": "cypress open",
     "styleguide": "npx styleguidist server",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "heroku-postbuild": "cd client && yarn && yarn run build"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
