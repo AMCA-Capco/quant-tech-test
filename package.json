@@ -9,26 +9,8 @@
   "license": "MIT",
   "author": "Alex Mccarroll",
   "scripts": {
-    "prebuild": "npm run build:clean",
-    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
-    "build:clean": "rimraf ./build",
-    "clean": "npm run test:clean && npm run build:clean",
-    "eslint:fix": "eslint -- . --ignore-path .gitignore --fix",
-    "lint": "npm run lint:js && npm run lint:css",
-    "lint:eslint": "eslint --ignore-path .gitignore",
-    "lint:js": "npm run lint:eslint -- . ",
-    "lint:css": "sass-lint -c .sass-lint.yml 'app/**/*.scss' -v -q",
-    "start": "cross-env NODE_ENV=development node server",
-    "start:prod": "cross-env NODE_ENV=production node server",
-    "start:production": "npm run test && npm run build && npm run start:prod",
-    "pretest": "npm run test:clean && npm run lint",
-    "test": "cross-env NODE_ENV=test jest --coverage && cypress open",
-    "test:clean": "rimraf ./coverage",
-    "test:watch": "cross-env NODE_ENV=test jest --watchAll",
-    "cypress:open": "cypress open",
-    "styleguide": "npx styleguidist server",
-    "precommit": "npm run lint",
-    "heroku-postbuild": "cd client && yarn && yarn run build"
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
